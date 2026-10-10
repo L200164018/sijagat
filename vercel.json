@@ -1,9 +1,10 @@
 {
   "$schema": "https://openapi.vercel.sh/vercel.json",
-  "rewrites": [
+  "redirects": [
     {
-      "source": "/(.*)",
-      "destination": "/index.html"
+      "source": "/",
+      "destination": "https://www.appsheet.com/start/2232a87e-c956-4ff9-b9ed-764443e033aa",
+      "permanent": false
     }
   ]
 }
