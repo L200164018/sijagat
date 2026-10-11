@@ -1,15 +1,17 @@
-# SIJAGAT Web Wrapper (Vercel)
+# SIJAGAT URL Shortener (Vercel)
 
-Web wrapper responsif layar penuh untuk aplikasi AppSheet:
-`https://www.appsheet.com/start/2232a87e-c956-4ff9-b9ed-764443e033aa`
+Pengalihan tautan resmi untuk aplikasi AppSheet:
 
-Dengan konfigurasi ini, URL peramban tetap berada di domain Anda (`sijagat.vercel.app`) menggunakan iFrame.
+1. **Domain Utama (`sijagat.my.id` & `www.sijagat.my.id`)**:
+   Mengarahkan ke halaman aplikasi utama:
+   `https://www.appsheet.com/start/2232a87e-c956-4ff9-b9ed-764443e033aa`
 
-## Struktur File
+2. **Subdomain Mobile (`mobile.sijagat.my.id`)**:
+   Mengarahkan langsung ke shortcut instalasi mobile:
+   `https://www.appsheet.com/newshortcut/2232a87e-c956-4ff9-b9ed-764443e033aa`
 
-- `index.html`: Wrapper iFrame responsif layar penuh dengan izin akses kamera, mikrofon, dan lokasi untuk fitur AppSheet.
-- `vercel.json`: Konfigurasi rute Vercel untuk mengarahkan permintaan ke `index.html`.
+## Konfigurasi DNS
 
-## Catatan Penting
-
-- Opsi **Allow app embedding** pada pengaturan aplikasi AppSheet harus selalu dalam kondisi aktif (ON) agar iFrame dapat dimuat.
+- **Domain Utama**: Tipe `A`, Name `@`, Value `76.76.21.21`
+- **Subdomain WWW**: Tipe `CNAME`, Name `www`, Value `cname.vercel-dns.com`
+- **Subdomain Mobile**: Tipe `CNAME`, Name `mobile`, Value `cname.vercel-dns.com`
